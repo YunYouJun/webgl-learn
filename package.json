@@ -1,0 +1,11 @@
+{
+  "name": "webgl-learn",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "https://github.com/YunYouJun/webgl-learn",
+  "author": "YunYouJun <me@yunyoujun.cn>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "live-server"
+  }
+}
