@@ -1,8 +1,8 @@
 # webgl-learn
 
-Learn Book: WebGL Programming Guide
+记录学习 WebGL 的笔记
 
-记录学习《WebGL 编程指南》的中文笔记
+- [WebGL | 语雀](https://www.yuque.com/yunyoujun/graph/tgngb6)
 
 ## 文件夹
 

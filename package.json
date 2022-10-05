@@ -6,6 +6,15 @@
   "author": "YunYouJun <me@yunyoujun.cn>",
   "license": "MIT",
   "scripts": {
-    "dev": "live-server"
+    "build": "pnpm -C packages/site run build",
+    "dev": "pnpm -C packages/site run dev",
+    "test": "vitest",
+    "test:unit": "vitest"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.27.0",
+    "eslint": "^8.24.0",
+    "typescript": "^4.8.4",
+    "vitest": "^0.23.4"
   }
 }
