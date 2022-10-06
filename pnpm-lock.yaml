@@ -27,6 +27,7 @@ importers:
       '@vueuse/head': ^0.7.12
       critters: ^0.0.16
       cross-env: ^7.0.3
+      gl-matrix: ^3.4.3
       https-localhost: ^4.7.1
       markdown-it-link-attributes: ^4.0.1
       markdown-it-shiki: ^0.5.1
@@ -70,6 +71,7 @@ importers:
       '@vue/test-utils': 2.1.0_vue@3.2.40
       critters: 0.0.16
       cross-env: 7.0.3
+      gl-matrix: 3.4.3
       https-localhost: 4.7.1
       markdown-it-link-attributes: 4.0.1
       markdown-it-shiki: 0.5.1
@@ -2947,6 +2949,10 @@ packages:
     dependencies:
       call-bind: 1.0.2
       get-intrinsic: 1.1.2
+    dev: true
+
+  /gl-matrix/3.4.3:
+    resolution: {integrity: sha512-wcCp8vu8FT22BnvKVPjXa/ICBWRq/zjFfdofZy1WSpQZpphblv12/bOQLBC1rMM7SGOFS9ltVmKOHil5+Ml7gA==}
     dev: true
 
   /glob-parent/5.1.2:

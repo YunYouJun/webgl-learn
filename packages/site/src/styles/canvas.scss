@@ -1,8 +1,13 @@
 canvas {
   border: 2px solid black;
-  background-color: black;
+  background-color: gray;
 }
 
 video {
   display: none;
+}
+
+#glcanvas {
+  margin: auto;
+  @apply transition shadow-md hover:shadow-lg;
 }

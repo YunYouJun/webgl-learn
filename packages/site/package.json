@@ -31,6 +31,7 @@
     "@vue/test-utils": "^2.1.0",
     "critters": "^0.0.16",
     "cross-env": "^7.0.3",
+    "gl-matrix": "^3.4.3",
     "https-localhost": "^4.7.1",
     "markdown-it-link-attributes": "^4.0.1",
     "markdown-it-shiki": "^0.5.1",
