@@ -2,17 +2,19 @@
   "name": "webgl-learn",
   "version": "1.0.0",
   "private": true,
-  "repository": "https://github.com/YunYouJun/webgl-learn",
   "author": "YunYouJun <me@yunyoujun.cn>",
   "license": "MIT",
+  "repository": "https://github.com/YunYouJun/webgl-learn",
   "scripts": {
     "build": "pnpm -C packages/site run build",
     "dev": "pnpm -C packages/site run dev",
+    "lint": "eslint .",
     "test": "vitest",
-    "test:unit": "vitest"
+    "test:unit": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.1",
+    "@antfu/eslint-config": "^0.39.3",
     "eslint": "^8.41.0",
     "typescript": "^5.0.4",
     "vitest": "^0.31.1"
