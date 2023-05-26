@@ -8,10 +8,12 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'vite-plugin-vue-markdown'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
-import Inspect from 'vite-plugin-inspect'
+
+// import Inspect from 'vite-plugin-inspect'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
+import Glsl from 'vite-plugin-glsl'
 
 export default defineConfig({
   resolve: {
@@ -92,9 +94,18 @@ export default defineConfig({
       include: [path.resolve(__dirname, 'locales/**')],
     }),
 
+    // https://github.com/UstymUkhman/vite-plugin-glsl
+    // default
+    // include: [                   // Glob pattern, or array of glob patterns to import
+    //   '**/*.glsl', '**/*.wgsl',
+    //   '**/*.vert', '**/*.frag',
+    //   '**/*.vs', '**/*.fs'
+    // ],
+    Glsl(),
+
     // https://github.com/antfu/vite-plugin-inspect
     // Visit http://localhost:3333/__inspect/ to see the inspector
-    Inspect(),
+    // Inspect(),
   ],
 
   // https://github.com/vitest-dev/vitest

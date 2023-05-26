@@ -23,3 +23,7 @@
 yarn global add live-server
 yarn dev
 ```
+
+## Other
+
+- 修正了一些 MDN 内容问题：[Commits · mdn/translated-content | By YunYouJun](https://github.com/mdn/translated-content/commits?author=yunyoujun)

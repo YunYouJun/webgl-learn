@@ -141,11 +141,31 @@ export function initShaderProgram(gl: WebGLRenderingContext, vsSource: string, f
   return shaderProgram
 }
 
+export function createModelViewMatrix() {
+  // Set the drawing position to the "identity" point, which is
+  // the center of the scene.
+  const modelViewMatrix = mat4.create()
+
+  // Now move the drawing position a bit to where we want to
+  // start drawing the square.
+
+  mat4.translate(
+    modelViewMatrix, // destination matrix
+    modelViewMatrix, // matrix to translate
+    [-0.0, 0.0, -6.0],
+  ) // amount to translate
+
+  return modelViewMatrix
+}
+
 //
 // Draw the scene.
 //
-export function drawScene(gl: WebGLRenderingContext, buffers: ReturnType<typeof initBuffers>, programInfo: ReturnType<typeof createProgramInfo>) {
-  if (!programInfo)
+export function drawScene(gl: WebGLRenderingContext, buffers: ReturnType<typeof initBuffers>, programInfo: ReturnType<typeof createProgramInfo>, options: {
+  modelViewMatrix?: mat4
+  deltaTime?: number
+} = {}) {
+  if (!gl || !programInfo)
     return
 
   gl.clearColor(0.0, 0.0, 0.0, 1.0) // Clear to black, fully opaque
@@ -174,18 +194,9 @@ export function drawScene(gl: WebGLRenderingContext, buffers: ReturnType<typeof 
   // as the destination to receive the result.
   mat4.perspective(projectionMatrix, fieldOfView, aspect, zNear, zFar)
 
-  // Set the drawing position to the "identity" point, which is
-  // the center of the scene.
-  const modelViewMatrix = mat4.create()
-
-  // Now move the drawing position a bit to where we want to
-  // start drawing the square.
-
-  mat4.translate(
-    modelViewMatrix, // destination matrix
-    modelViewMatrix, // matrix to translate
-    [-0.0, 0.0, -6.0],
-  ) // amount to translate
+  const { modelViewMatrix } = options
+  if (!modelViewMatrix)
+    return
 
   // Tell WebGL how to pull out the positions from the position
   // buffer into the vertexPosition attribute
