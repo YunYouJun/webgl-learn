@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import { mat4 } from 'gl-matrix'
-import { createProgramInfo, drawScene, initBuffers } from '../sample3'
+import { createProgramInfo } from '../sample3'
+import { initBuffers } from '../sample5'
+import { drawScene } from '../sample5/draw-scene'
+
 import fsSource from '../sample3/main.frag'
 import vsSource from '../sample3/main.vert'
 
@@ -8,7 +11,7 @@ onMounted(() => {
   main()
 })
 
-let squareRotation = 0.0
+let cubeRotation = 0.0
 
 function createModelViewMatrix() {
   // Set the drawing position to the "identity" point, which is
@@ -24,10 +27,24 @@ function createModelViewMatrix() {
     [-0.0, 0.0, -6.0],
   ) // amount to translate
 
-  mat4.rotate(modelViewMatrix, // destination matrix
+  mat4.rotate(
+    modelViewMatrix, // destination matrix
     modelViewMatrix, // matrix to rotate
-    squareRotation, // amount to rotate in radians
-    [0, 0, 1]) // axis to rotate around
+    cubeRotation, // amount to rotate in radians
+    [0, 0, 1],
+  ) // axis to rotate around (Z)
+  mat4.rotate(
+    modelViewMatrix, // destination matrix
+    modelViewMatrix, // matrix to rotate
+    cubeRotation * 0.7, // amount to rotate in radians
+    [0, 1, 0],
+  ) // axis to rotate around (Y)
+  mat4.rotate(
+    modelViewMatrix, // destination matrix
+    modelViewMatrix, // matrix to rotate
+    cubeRotation * 0.3, // amount to rotate in radians
+    [1, 0, 0],
+  ) // axis to rotate around (X)
 
   return modelViewMatrix
 }
@@ -64,7 +81,7 @@ function main() {
       return
 
     const modelViewMatrix = createModelViewMatrix()
-    squareRotation += deltaTime
+    cubeRotation += deltaTime
     drawScene(gl, buffers, programInfo, {
       modelViewMatrix,
       deltaTime,

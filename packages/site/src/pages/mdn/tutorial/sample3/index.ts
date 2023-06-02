@@ -28,22 +28,10 @@ export function createProgramInfo(gl: WebGLRenderingContext, vsSource: string, f
 
 export function initColorBuffer(gl: WebGLRenderingContext) {
   const colors = [
-    1.0,
-    1.0,
-    1.0,
-    1.0, // 白
-    1.0,
-    0.0,
-    0.0,
-    1.0, // 红
-    0.0,
-    1.0,
-    0.0,
-    1.0, // 绿
-    0.0,
-    0.0,
-    1.0,
-    1.0, // 蓝
+    1.0, 1.0, 1.0, 1.0, // 白
+    1.0, 0.0, 0.0, 1.0, // 红
+    0.0, 1.0, 0.0, 1.0, // 绿
+    0.0, 0.0, 1.0, 1.0, // 蓝
   ]
 
   const colorBuffer = gl.createBuffer()
