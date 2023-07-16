@@ -16,6 +16,8 @@ import Shiki from 'markdown-it-shiki'
 import Glsl from 'vite-plugin-glsl'
 
 export default defineConfig({
+  base: '/webgl-learn/',
+
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
