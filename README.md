@@ -14,6 +14,7 @@
 
 ## Ref
 
+- [您的第一个 WebGPU 应用](https://codelabs.developers.google.com/your-first-webgpu-app?hl=zh-cn#0)
 - [WebGL编程指南](https://book.douban.com/subject/25909351/)
 - [示例资源](https://sites.google.com/site/webglbook/)
 

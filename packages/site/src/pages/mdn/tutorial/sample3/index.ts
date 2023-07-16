@@ -6,7 +6,7 @@ export function createProgramInfo(gl: WebGLRenderingContext, vsSource: string, f
   // for the vertices and so forth is established.
   const shaderProgram = initShaderProgram(gl, vsSource, fsSource)
   if (!shaderProgram)
-    return
+    throw new Error('Failed to initialize shaders.')
 
   // Collect all the info needed to use the shader program.
   // Look up which attributes our shader program is using

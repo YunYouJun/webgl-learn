@@ -1,3 +1,5 @@
+import { cube } from '~/utils/mdn/constants'
+
 export function initPositionBuffer(gl: WebGLRenderingContext) {
   // Create a buffer for the square's positions.
 
@@ -8,25 +10,7 @@ export function initPositionBuffer(gl: WebGLRenderingContext) {
 
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer)
 
-  const positions = [
-    // Front face
-    -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0, 1.0,
-
-    // Back face
-    -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0, -1.0,
-
-    // Top face
-    -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0,
-
-    // Bottom face
-    -1.0, -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, -1.0, 1.0, -1.0, -1.0, 1.0,
-
-    // Right face
-    1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0,
-
-    // Left face
-    -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0,
-  ]
+  const positions = cube.positions
 
   // Now pass the list of positions into WebGL to build the
   // shape. We do this by creating a Float32Array from the
@@ -36,7 +20,7 @@ export function initPositionBuffer(gl: WebGLRenderingContext) {
   return positionBuffer
 }
 
-function initIndexBuffer(gl: WebGLRenderingContext) {
+export function initIndexBuffer(gl: WebGLRenderingContext) {
   const indexBuffer = gl.createBuffer()
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer)
 
@@ -44,14 +28,7 @@ function initIndexBuffer(gl: WebGLRenderingContext) {
   // indices into the vertex array to specify each triangle's
   // position.
 
-  const indices = [
-    0, 1, 2, 0, 2, 3, // front
-    4, 5, 6, 4, 6, 7, // back
-    8, 9, 10, 8, 10, 11, // top
-    12, 13, 14, 12, 14, 15, // bottom
-    16, 17, 18, 16, 18, 19, // right
-    20, 21, 22, 20, 22, 23, // left
-  ]
+  const indices = cube.indices
 
   // Now send the element array to GL
 

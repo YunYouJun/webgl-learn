@@ -4,7 +4,7 @@ import type { initBuffers } from '.'
 
 // Tell WebGL how to pull out the positions from the position
 // buffer into the vertexPosition attribute.
-function setPositionAttribute(gl: WebGLRenderingContext, buffers: ReturnType<typeof initBuffers>, programInfo: ReturnType<typeof createProgramInfo>) {
+export function setPositionAttribute(gl: WebGLRenderingContext, buffers: ReturnType<typeof initBuffers>, programInfo: ReturnType<typeof createProgramInfo>) {
   if (!programInfo)
     return
 
@@ -28,7 +28,7 @@ function setPositionAttribute(gl: WebGLRenderingContext, buffers: ReturnType<typ
 
 // Tell WebGL how to pull out the colors from the color buffer
 // into the vertexColor attribute.
-function setColorAttribute(gl: WebGLRenderingContext, buffers: ReturnType<typeof initBuffers>, programInfo: ReturnType<typeof createProgramInfo>) {
+export function setColorAttribute(gl: WebGLRenderingContext, buffers: ReturnType<typeof initBuffers>, programInfo: ReturnType<typeof createProgramInfo>) {
   if (!programInfo)
     return
 
