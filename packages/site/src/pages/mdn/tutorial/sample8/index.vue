@@ -6,8 +6,6 @@ import { main } from './main'
 
 const canvasRef = ref<HTMLCanvasElement>()
 
-const copyVideo = ref(false)
-
 onMounted(() => {
   if (!canvasRef.value)
     return

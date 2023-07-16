@@ -2,6 +2,7 @@
   "name": "webgl-learn",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@8.6.7",
   "author": "YunYouJun <me@yunyoujun.cn>",
   "license": "MIT",
   "repository": "https://github.com/YunYouJun/webgl-learn",
