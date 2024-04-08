@@ -118,7 +118,6 @@ export function loadTexture(gl: WebGLRenderingContext, url: string) {
 /**
  * https://chatkit.app/s/AtBbJPBPyIuCRMRH_Z7IP
  * @param value
- * @returns
  */
 function isPowerOf2(value: number) {
   return (value & (value - 1)) === 0
@@ -130,17 +129,59 @@ export function initTextureBuffer(gl: WebGLRenderingContext) {
 
   const textureCoordinates = [
     // Front
-    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
     // Back
-    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
     // Top
-    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
     // Bottom
-    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
     // Right
-    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
     // Left
-    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
   ]
 
   gl.bufferData(

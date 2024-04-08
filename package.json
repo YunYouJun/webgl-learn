@@ -1,8 +1,9 @@
 {
   "name": "webgl-learn",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@8.6.7",
+  "packageManager": "pnpm@8.15.6",
   "author": "YunYouJun <me@yunyoujun.cn>",
   "license": "MIT",
   "repository": "https://github.com/YunYouJun/webgl-learn",
@@ -15,9 +16,9 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.8",
-    "eslint": "^8.45.0",
-    "typescript": "^5.1.6",
-    "vitest": "^0.31.4"
+    "@antfu/eslint-config": "^2.12.2",
+    "eslint": "^9.0.0",
+    "typescript": "^5.4.4",
+    "vitest": "^1.4.0"
   }
 }

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const name = $ref()
+const name = ref()
 const router = useRouter()
 function go() {
-  if (name)
-    router.push(`/${name}`)
+  if (name.value)
+    router.push(`/${name.value}`)
 }
 
 const { t } = useI18n()

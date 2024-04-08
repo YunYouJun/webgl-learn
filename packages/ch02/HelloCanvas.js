@@ -5,7 +5,7 @@ export function main() {
 
   // Get the rendering context for WebGL
   // @ts-expect-error get from cdn
-  // eslint-disable-next-line no-undef
+
   const gl = getWebGLContext(canvas)
   if (!gl) {
     // eslint-disable-next-line no-console
