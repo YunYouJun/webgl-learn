@@ -16,6 +16,7 @@
     },
     "resolveJsonModule": true,
     "types": [
+      "@webgpu/types",
       "vitest",
       "vite/client",
       "vite-plugin-pages/client",

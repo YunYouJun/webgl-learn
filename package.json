@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.12.2",
+    "@webgpu/types": "^0.1.40",
     "eslint": "^9.0.0",
     "typescript": "^5.4.4",
     "vitest": "^1.4.0"
